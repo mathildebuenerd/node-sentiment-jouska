@@ -106,7 +106,7 @@ function tokenize(sInput) {
     return sInput
         .toLowerCase()
         .replace(/\r?\n|\r/g, ' ') // line breaks replaced by space https://stackoverflow.com/a/10805292
-        .replace(/[.,\/#!$%\^&\*;:{}=_`\"~()]/g, '')
+        .replace(/[.,\/#!?$%\^&\*;:{}=_`\"~()]/g, '')
         .replace(/-/g, ' ')
         .replace(/\s{2,}/g, ' ') // remove extra spaces https://stackoverflow.com/a/4328722
         .split(' ');
@@ -195,6 +195,7 @@ module.exports = function (sPhrase, sLangCode, originalPhrase, mCallback) {
 
                 // we continue the while loop, from the index after the first found emoji
                 hasEmoji = sentence.indexOf(emoji, hasEmoji + 1 );
+
             }
         }
     }
@@ -293,6 +294,7 @@ module.exports = function (sPhrase, sLangCode, originalPhrase, mCallback) {
     } else if (oResult.score < 0) {
         oResult.vote = 'negative';
     }
+
 
     if (mCallback == null) {
         return oResult;
