@@ -5,3 +5,7 @@ Based on [node-sentiment](https://github.com/nicolasbonnici/node-sentiment) by N
 # Usage
 
 ## Installation
+
+Install directly from this repo.
+
+`npm install --save https://github.com/mathildebuenerd/node-sentiment-jouska/tarball/master`
