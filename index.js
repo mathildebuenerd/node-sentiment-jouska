@@ -113,7 +113,7 @@ function tokenize(sInput) {
 };
 
 // Performs sentiment analysis on the provided input 'phrase'
-module.exports = function (sPhrase, sLangCode, originalPhrase, mCallback) {
+module.exports = function (sPhrase, sLangCode = "en", originalPhrase = sPhrase, mCallback) {
 
     if (typeof sPhrase === 'undefined') {
         sPhrase = '';
